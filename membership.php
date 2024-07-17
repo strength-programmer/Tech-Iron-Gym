@@ -1,20 +1,23 @@
 <?php
 include 'dash_button.php';
 
-
+session_start();
 //message error:
-  session_start();
+
   if (!isset($_SESSION['logged'])) { 
     header('Location: index.php');
     exit;
 }
   if (isset($_SESSION['add_message'])){
     $message = $_SESSION['add_message'];
-    session_destroy();
+    
   }
   else{
     $message = "";
   }
+  session_destroy();
+  session_start();
+  $_SESSION['logged'] = true;
     // Variables for viewing members
     include 'functions.php';
     include 'db_connect.php';

@@ -1,8 +1,8 @@
 <?php
   include('dash_button.php');
   // Start session
+
   session_start();
-  
     if (!isset($_SESSION['logged'])) { 
     header('Location: index.php');
     exit;
@@ -10,10 +10,13 @@
   // Message handling
   if (isset($_SESSION['add_message'])){
       $message = $_SESSION['add_message'];
-      session_destroy();
+    
   } else {
       $message = "";
   }
+  session_destroy();
+  session_start();
+  $_SESSION['logged'] = true;
 
   // Variables and error messages
   $username = $password = $username_err = $password_err = "";

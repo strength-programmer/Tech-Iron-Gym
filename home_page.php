@@ -5,7 +5,6 @@ if (!isset($_SESSION['logged'])) {
     exit;
 }
 
-$username = $_SESSION['user'];
 
 
 include "dash_button.php";
@@ -28,7 +27,7 @@ $number_packages = count_rows("packages");
 
 <br>
 <!-- Welcoming -->
-<h3>Welcome Back <?php echo $username?>!</h3>
+<h3>Welcome Back Boss!</h3>
 
 
 <!-- Line -->

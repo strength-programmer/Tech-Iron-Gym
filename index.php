@@ -1,5 +1,6 @@
 <?php
- 
+    session_start();
+    session_destroy();
     $password = "";
     $username = "";
 
@@ -26,6 +27,7 @@
                         $_SESSION['logged'] = true;
                         $_SESSION['user'] = $username;
                         header("Location: home_page.php");
+                     
                     } else{
                         $password = "";
                         $error_message = "Incorrect password.";

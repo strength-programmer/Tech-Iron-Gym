@@ -1,19 +1,21 @@
 <?php
+session_start();
     include('dash_button.php');
 
-    session_start();
     if (!isset($_SESSION['logged'])) { 
         header('Location: index.php');
         exit;
     }
     if (isset($_SESSION['add_message'])) {
         $message = $_SESSION['add_message'];
-        session_destroy();
+       
+
     } else {
         $message = "";
     }
-
-
+    session_destroy();
+    session_start();
+    $_SESSION['logged'] = true;
     // values
     $name = $email = $contact = $specialization = $rate = $submit = "";
     // variable error

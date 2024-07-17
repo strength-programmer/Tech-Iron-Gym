@@ -1,4 +1,9 @@
 <?php 
+    session_start();
+    if (!isset($_SESSION['logged'])) { 
+    header('Location: index.php');
+    exit;
+    }
     ob_start();
     include "dash_button.php";
     //use given id

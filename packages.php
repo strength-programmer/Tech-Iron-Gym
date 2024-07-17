@@ -1,18 +1,21 @@
 <?php
 include('dash_button.php');
+session_start();
 
 
-    session_start();
     if (!isset($_SESSION['logged'])) { 
       header('Location: index.php');
       exit;
   }
     if (isset($_SESSION['add_message'])){
       $message = $_SESSION['add_message'];
-      session_destroy();
+      
     } else {
       $message = "";
     }
+    session_destroy();
+    session_start();
+    $_SESSION['logged'] = true;
     // Variables for package input and errors
     $package_name = $description = $price = $package_name_err = $description_err = $price_err = "";
     $empty = "Please fill out this field";

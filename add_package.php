@@ -1,5 +1,9 @@
 <?php
-
+      session_start();
+      if (!isset($_SESSION['logged'])) { 
+        header('Location: index.php');
+        exit;
+        }
 // Variables
 $package_name = $package_description = $package_price = "";
 $package_name_err = $package_description_err = $package_price_err = "";

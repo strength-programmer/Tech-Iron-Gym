@@ -1,19 +1,22 @@
 <?php
 include 'dash_button.php';
 
-    session_start();
 
+session_start();
       if (!isset($_SESSION['logged']) || $_SESSION['logged'] !== true) { 
           header('Location: index.php');
           exit;
       }
       if (isset($_SESSION['add_message'])){
         $message = $_SESSION['add_message'];
-        session_destroy();
+        
       }
       else{
         $message = "";
       }
+      session_destroy();
+      session_start();
+      $_SESSION['logged'] = true;
 
     //variables
     $plan_name = $validity = $price = $plan_name_err = $validity_err = $price_err = "";

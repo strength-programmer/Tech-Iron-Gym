@@ -1,5 +1,11 @@
 <?php
 
+    session_start();
+    if (!isset($_SESSION['logged'])) { 
+    header('Location: index.php');
+    exit;
+    }
+
     //variables
     $plan_name = $validity = $price = $plan_name_err = $validity_err = $price_err = "";
     $empty = "Please fill out this field";
