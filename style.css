@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .logo {
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px 0;
+}
+
+
+.home .content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 5em; 
+  letter-spacing: .03em;
+}
+
+.content p {
+  font-size: 1.4em; 
+  line-height: 1.7; 
+}
+
+.content a {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  font-weight: 500;
+  padding: 10px 40px;
+  border-radius: 40px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.content a:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+.home .wrapper-login {
+    position: relative;
+    width: 600px; 
+    height: 600px; 
+    margin: 0 auto; 
+    padding: 40px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 20px; 
+    margin-right: 50px; 
+}
+
+.wrapper-login h2 {
+    font-size: 2.5em; 
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.wrapper-login .input-box {
+    position: relative;
+    width: 100%;
+    height: 60px; 
+    margin-bottom: 30px; 
+}
+
+.input-box input {
+    width: calc(100% - 40px); 
+    height: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1.2em; 
+    color: #fff;
+    padding: 0 20px; 
+    padding-left: 50px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px; 
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+    font-size: 1em;
+    top: -18px; 
+    left: 20px; 
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px; 
+    transform: translateY(-50%);
+    font-size: 1.5em; 
+    color: #fff;
+}
+
+.wrapper-login .remember-forgot {
+    font-size: 1em; 
+    color: #fff;
+    font-weight: 500;
+    margin: -30px 0 20px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #0d0d0d;
+    margin-right: 5px; 
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper-login .btn {
+    width: 100%;
+    height: 60px; 
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #0d0d0d, #bfbfbf);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 1.2em; 
+    color: #fff;
+    font-weight: 500;
+}
+
+.wrapper-login .register-link {
+    font-size: 1em; 
+    color: #fff;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}

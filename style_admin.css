@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .logo {
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px 0;
+}
+
+.home .content {
+  max-width: 600px;
+  color: #fff;
+}
+
+
+*{
+  margin:0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body{
+display: flex;
+
+}
+
+
+.sidebar{
+position: sticky;
+top: 0;
+left: 0;
+bottom: 0;
+width: 110px;
+height: 100vh;
+padding: 0 1.7rem;
+color: #fff;
+overflow: hidden;
+transition: all 0.5s linear;
+background: #1e2126;
+
+
+}
+.sidebar:hover{
+
+width: 260px;
+transition: 0.5s;
+
+}
+
+.logo{
+
+height: 80px;
+padding: 16px;
+
+}
+
+.menu{
+
+height: 88%;
+position: relative;
+list-style: none;
+padding: 0;
+
+}
+
+.menu li{
+padding: 1rem;
+margin: 8px;
+border-radius: 8px;
+transition: all 0.5s ease-in-out;
+
+}
+
+.menu li:hover{
+background: #e0e0e058;
+
+
+}
+
+.menu a{
+color: #fff;
+font-size: 14px;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 1.5rem;
+
+}
+
+.menu a span{
+overflow: hidden;
+
+
+}
+
+.menu a i{
+font-size: 1.2rem;
+
+}
+
+.logout{
+
+position: absolute;
+bottom:0;
+left: 0;
+width: 100%;
+}
+/* main body section        */
+.main--content{
+position: relative;
+background: #ebe9e9;
+width: 100%;
+padding: 1rem;
+
+
+}
+
+
+.header--wrapper img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+
+
+
+}
+
+.header--wrapper{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+background: #fff;
+border-radius: 10px;
+padding: 10px 2rem;
+margin-bottom: 1rem;
+
+}
+
+.header--title{
+color: rgba#1e2126;
+}
+
+.user--info{
+display: flex;
+align-items: center;
+gap:1rem;
+
+
+}
+
+
+.searh--box{
+background: rgb(237, 237, 237);
+border-radius: 15px;
+color: rgba(113, 99, 186, 255);
+display: flex;
+align-items: center;
+gap: 5px;
+padding: 4px 12px;
+
+}
+
+.search-box input{
+background: transparent;
+padding: 10px;
+
+}
+
+.searh--box i{
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+
+}
+
+.search-box i:hover{
+
+transform: scale(1.2);
+
+
+}
+
+
+.home_main {
+   
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #e0e0e058;;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 80px 100px 0;
+}
+
+hr.new4 {
+    border: 1px solid #1e2126;
+  }
+
+  .cards {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+    background: #e8e8e8;
+    color: #fff;
+}
+
+.cards .wrapper {
+    padding: 10px 10%; /* Adjust padding as needed */
+}
+
+#card-area {
+    padding: 50px 0;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust box width */
+    grid-gap: 60px; /* Adjust gap between boxes */
+    margin-top: 30px;
+}
+
+.cards .box {
+    width: 320px; /* Adjust the width of the box */
+    height: 360px; /* Adjust the height of the box */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    background: #2e2f31; /* Unique background color for each box */
+    padding: 10px; /* Adjust padding inside the box */
+    transition: transform 0.3s; /* Faster transition */
+    margin-left: 20px; /* Move the box to the right */
+}
+
+.cards .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s; /* Faster transition */
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    font-size: 14px;
+    text-align: center;
+    transition: height 0.3s; /* Faster transition */
+}
+
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.box:hover .overlay {
+    height: 100%;
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
